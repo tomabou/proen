@@ -25,6 +25,11 @@ int main(){
     for (i = 0; i < n;i++){
         int j;
         int x = A[i];
+        if(x == 0){
+            if(dp[0]==0){
+                dp[0] = 1;
+            }
+        }
         for (j = 0; j < x; j++)
         {
             dp[x] = dp[x] < (dp[j] + 1) ? (dp[j] + 1) : dp[x];
